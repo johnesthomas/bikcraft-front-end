@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  display: grid;
+  gap: 60px;
+  justify-items: center;
+  margin-top: 60px;
+  background-color: #f7f7f7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0px;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  gap: 60px;
+}
+
+nav .nav-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav-btn {
+  color: black;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  display: inline-block;
+  border: 2px solid #ffffff;
+}
+
+.nav-btn:hover {
+  border: 2px solid red;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 62rem;
+}
+
+.main-intro-cover img {
+  max-width: 100%;
+  display: block;
+}
+
+.main-intro {
+  background-color: #ffffff;
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  justify-items: end;
+  padding: 2.5rem;
+  text-align: right;
+  position: relative;
+}
+
+.main-intro::before {
+  content: "";
+  background-color: #ee2211;
+  width: 60px;
+  height: 4px;
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  right: -30px;
+}
+
+.main-intro-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.main-intro-btn {
+  background-color: #ee2211;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.main-intro-btn:hover {
+  background-color: darkred;
+}
+
+.main-advantages {
+  align-self: center;
+  background-image: url(/img/onda.svg);
+}
+
+.main-advantages h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  text-align: right;
+  /* word-break: break-all; quebrar palavra */
+}
+
+.main-equipaments {
+  background-color: #ffffff;
+  padding: 2.5rem;
+}
+
+.main-equipaments div:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+.main-equipaments-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+}
+
+.main-equipaments-item:hover {
+  border-left: 4px solid red;
+}
+
+.main-equipaments-item p {
+  grid-column: 2;
+}
+
+footer {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+  .main-intro {
+    text-align: left;
+    justify-items: start;
+  }
+  .main-intro::before {
+    display: none;
+  }
+}
